@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Neural Network">
+      <UniqueIdentifier>{1eb9ad9b-5165-4788-a5b4-d179b9216c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Neural Network">
+      <UniqueIdentifier>{ce52da92-97c2-48e5-9493-2a047e9cac1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\DevilsDiceGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\Human.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\Neuron.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\OptimalAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\OptimalNN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\OriginalAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\OriginalNN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\RandomAI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\RandomNN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\dataEntry.h">
+      <Filter>Header Files\Neural Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\dataReader.h">
+      <Filter>Header Files\Neural Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\neuralNetwork.h">
+      <Filter>Header Files\Neural Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\neuralNetworkTrainer.h">
+      <Filter>Header Files\Neural Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\HybridNN.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\Neuron.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\Source.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\dataReader.cpp">
+      <Filter>Source Files\Neural Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\neuralNetwork.cpp">
+      <Filter>Source Files\Neural Network</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\neuralNetworkTrainer.cpp">
+      <Filter>Source Files\Neural Network</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\Devil%27s Dice NN\Devil%27s Dice NN\data.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

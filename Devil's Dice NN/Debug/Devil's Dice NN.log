@@ -1,0 +1,5 @@
+﻿  Source.cpp
+c:\users\rob\documents\_school\ai\devil's dice nn\devil's dice nn\player.h(34): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+c:\users\rob\documents\_school\ai\devil's dice nn\devil's dice nn\devilsdicegame.h(228): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+  Devil's Dice NN.vcxproj -> C:\Users\Rob\Documents\_School\AI\Devil's Dice NN\Debug\Devil's Dice NN.exe
+  Devil's Dice NN.vcxproj -> C:\Users\Rob\Documents\_School\AI\Devil's Dice NN\Debug\Devil's Dice NN.pdb (Partial PDB)
