@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Devils-dice-neural-network by rewilkins</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Devils-dice-neural-network</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/rewilkins/Devils-Dice-Neural-Network" class="btn">View on GitHub</a>
+      <a href="https://github.com/rewilkins/Devils-Dice-Neural-Network/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/rewilkins/Devils-Dice-Neural-Network/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="abstract" class="anchor" href="#abstract" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Abstract</h3>
+
+<p>Devil’s Dice is a dice playing game of chance.  It is more formally known as Pig.  The main objective of this project was to build a Neural Network (NN) that could learn when to roll or pass the dice for Devil’s Dice.  This project eventually evolved into seeing how accurately a NN could learn from other players.  This helps demonstrate a NN’s ability to constantly learn and build (mimic) personalities.</p>
+
+<p>The end goal of this project was to build a dynamic player.  I wanted a player that didn’t have to be told how to paly but rather could watch and learn how to play.  The non-NN players were automated methods of playing with fixed and hard-coded conditions, they were told how to play.  Each NN learned from one of these automated methods.  They were all then put up against each other in a tournament.  The results show how they did against each other and compared against their original counterpart.</p>
+
+<h3>
+<a id="rules-of-the-game" class="anchor" href="#rules-of-the-game" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Rules of the Game</h3>
+
+<ol>
+<li>When it is your turn, you can role the dice to obtain points.  The number that is rolled is the number of points obtained for that role.</li>
+<li>At anytime during your turn, you may decide to pass the dice to your opponent instead of rolling.  This will bank your collected points from that turn and add them to your overall total score.</li>
+<li>If at anytime you roll a 1 on the dice, you loose all your points accumulated that turn and must then pass the dice to your opponent.</li>
+<li>First person to accumulate 100 points wins.</li>
+</ol>
+
+<h3>
+<a id="problem-description" class="anchor" href="#problem-description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem Description</h3>
+
+<p><strong>Given</strong> a six sided dice and the chance to role it for points or pass to bank the accumulated points,
+<strong>Find</strong> out if a Neural Network can learn when it should risk rolling the dice or when it should pass the dice.  Find if this can be done from observing other automated methods designed for playing the game
+<strong>Such that</strong> the Neural Network performs as good as or better then its original counterpart.</p>
+
+<h3>
+<a id="automated-method-structures-ais" class="anchor" href="#automated-method-structures-ais" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Automated Method Structures (AIs)</h3>
+
+<p>Each Method is forced to role at least once because it make no sense for them to pass right off the bat and “skip” their turn.
+Random Simply randomly selects its decision.  No intelligence involved.
+Original is the AI I originally built for this game.  It is based off of the environmental conditions laid out in the “Application to the Project” section of this poster.  It was designed to play the game just as I would (as a human).  The AI processes the environment by comparing the conditions to hard coded situations.  These situations will set 3 “modifiers” to individual numbers which when added together will be between 0 and 100.  This creates a threshold.  This threshold starts low then works its way up to 100 as the turn progresses.  The AI makes a decision by rolling a random number 0 – 100.  If the number rolled is above the threshold, the AI roles, otherwise, the AI passes.
+Optimal is the mathematically proven optimal solution for this specific game.  It consists of simply rolling the dice until you have accumulated 20 points for your turn then it passes. </p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/rewilkins/Devils-Dice-Neural-Network">Devils-dice-neural-network</a> is maintained by <a href="https://github.com/rewilkins">rewilkins</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
