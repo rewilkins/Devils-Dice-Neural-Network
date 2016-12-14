@@ -43,7 +43,7 @@
 <strong>Find</strong> out if a Neural Network can learn when it should risk rolling the dice or when it should pass the dice.  Find if this can be done from observing other automated methods designed for playing the game
 <strong>Such that</strong> the Neural Network performs as good as or better then its original counterpart.</p>
 
-<p>![[<a href="https://github.com/rewilkins/Devils-Dice-Neural-Network/blob/master/Images/Board.png">https://github.com/rewilkins/Devils-Dice-Neural-Network/blob/master/Images/Board.png</a>]]</p>
+<p><img src="https://cloud.githubusercontent.com/assets/14120532/21174061/3ceae484-c198-11e6-8a1b-7a2d6b89c6a4.png" alt=""></p>
 
 <h3>
 <a id="automated-method-structures-ais" class="anchor" href="#automated-method-structures-ais" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Automated Method Structures (AIs)</h3>
@@ -52,6 +52,57 @@
 Random Simply randomly selects its decision.  No intelligence involved.
 Original is the AI I originally built for this game.  It is based off of the environmental conditions laid out in the “Application to the Project” section of this poster.  It was designed to play the game just as I would (as a human).  The AI processes the environment by comparing the conditions to hard coded situations.  These situations will set 3 “modifiers” to individual numbers which when added together will be between 0 and 100.  This creates a threshold.  This threshold starts low then works its way up to 100 as the turn progresses.  The AI makes a decision by rolling a random number 0 – 100.  If the number rolled is above the threshold, the AI roles, otherwise, the AI passes.
 Optimal is the mathematically proven optimal solution for this specific game.  It consists of simply rolling the dice until you have accumulated 20 points for your turn then it passes. </p>
+
+<h3>
+<a id="method" class="anchor" href="#method" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Method</h3>
+
+<h2>
+<a id="basic-framework" class="anchor" href="#basic-framework" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Framework:</h2>
+
+<p>A Neural Network’s (NN) structure is used to learn and make decisions in this project.  The NN player’s move is picked by applying an activation function to a processed set of environmental inputs.
+To further understand this, a NN is made up of multiple nodes.  Each NN has a input layer of nodes, output layer of nodes, and possibly multiple hidden layers of nodes in between.  Each node has inputs; they have as many inputs as nodes in the layer behind them.  Each node has no control of what inputs come into it so they “control” the inputs by processing them at the threshold with internal multipliers.  These multipliers are called weights.  The threshold multiplies each input with its corresponding weight then sums all the results together.  The result from the threshold is then fed through an activation function which then gives the output for that node.  Each node’s output is an input for all the nodes in the layer after it.
+NNs are able to correct themselves, or learn, by being trained.  When training a NN, the NN is given inputs and shown the correct output(s).  The NN processes these inputs and is able to see if it is getting the correct answer(s) or not.  If not, the NN will adjust the weights being applied to its inputs and try again until it is guessing “close enough”.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14120532/21174108/75a9eff4-c198-11e6-8897-82380b6b5db0.png" alt="">
+<img src="https://cloud.githubusercontent.com/assets/14120532/21174105/71347700-c198-11e6-8091-c0dc1acd4b06.png" alt=""></p>
+
+<h2>
+<a id="application-to-the-project" class="anchor" href="#application-to-the-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Application to the Project:</h2>
+
+<p>The NN used in this project was created by Bobby Anguelov.  The NN was set to have 5 input nodes, 3 hidden layers of nodes, and 1 output node.  Many environmental conditions where evaluated and 5 where chosen to be used as inputs for the NN.  These inputs where chosen because they seemed to be the ones that influenced me the most when I play the game.</p>
+
+<h1>
+<a id="inputs" class="anchor" href="#inputs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Inputs:</h1>
+
+<ol>
+<li>Roll count: The number of times the player has rolled for that turn.</li>
+<li>Frequency of 1s being rolled: More conservative play style if a lot of 1s are being rolled.</li>
+<li>Turn score: The number of points that have been accumulated for that turn.</li>
+<li>Overall score: The overall number of points that have been accumulated.</li>
+<li>Opponent’s score: Where the player is at in comparison to the opponent.</li>
+</ol>
+
+<p>To obtain data for training the NN, I ran each automated method against itself for a total of 30 minutes.  Each time a method made a decision, the method would write their environmental conditions and decision to a text file.  Each NN was then trained from their corresponding  data in these files.  The weights generated were then applied to the NNs used in game.</p>
+
+<p>For testing my abstract, I put all the automated methods and NNs up against each other in a tournament.  Each pair played 100 times and record their win ratio before the tournament moved on to the next pair.</p>
+
+<h3>
+<a id="results" class="anchor" href="#results" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Results</h3>
+
+<p>During my data mining season, each automated method played against itself for a total of 30 minutes.  The number of decisions made is the amount of training data I had for training that NN. The results are given in the following table. </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14120532/21174115/7bc00d60-c198-11e6-94b5-9b79202fa432.png" alt=""></p>
+
+<p>During training, I found some unexpected results.  I was surprised to find that all three NNs reached 100% accuracy; and in a fairly low number of epochs too.  I was also surprised to see how fast the random NN reached 100% accuracy.</p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14120532/21174116/7e340cfe-c198-11e6-960f-534b48207294.png" alt=""></p>
+
+<p>The tournament results proved to be interesting and are shown in the table below.  As expected, each intelligence, when put up against itself, produced around a 50% win rate (shown as orange font).  Also as expected, the RandomNN was not able to understand the current environment and the random decision.  As a result, every time the RandomNN plays it will only role once then passes.  This crippled the RandomNN and evidently caused it to perform very bad.
+As for the OriginalNN and the OptimalNN, excitingly they performed better then their counterparts did.  Even though the NNs performed better, it usually wasn’t by much.  In the table below, the light backgrounds depict small differences while dark background depict large differences (Green shows improvement, Red shows a decrease in performance, Yellow shows no change).  </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/14120532/21174118/817ab2c8-c198-11e6-9ae5-32992d09f08a.png" alt=""></p>
+
+<p>I was excited to see that the NN version of the optimal solution out performed what was told to be the mathematically proven optimal solution for this game.  As a result, I did one last experiment.  Still running sets of 100 games,  I put OptimalNN up against OptimalAI 10 times.  I wanted to see how many sets  the NN was winning against its original counterpart.  The results below show the 10 games and the NN’s win ratios.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/rewilkins/Devils-Dice-Neural-Network">Devils-dice-neural-network</a> is maintained by <a href="https://github.com/rewilkins">rewilkins</a>.</span>
